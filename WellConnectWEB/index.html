@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WellConnect — Your Doctor, Just a Tap Away</title>
+  <meta name="description" content="WellConnect makes it effortless to find the right doctor, book an appointment, and take care of your health — all in one place." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500&family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <a href="#" class="navbar__logo">WellConnect</a>
+
+    <nav class="navbar__links" id="navLinks">
+      <a href="#hero">Home</a>
+      <a href="#why">Find a Doctor</a>
+      <a href="#pricing">Plans</a>
+      <a href="#cta">Contact us</a>
+    </nav>
+
+    <div class="navbar__actions">
+      <button class="btn-signup" id="btnSignup">Sign up</button>
+      <button class="btn-login-sm" id="btnLogin">Log in</button>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#hero">Home</a>
+    <a href="#why">Find a Doctor</a>
+    <a href="#pricing">Plans</a>
+    <a href="#cta">Contact us</a>
+    <div class="mobile-menu__actions">
+      <button class="btn-signup">Sign up</button>
+      <button class="btn-login-sm">Log in</button>
+    </div>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <h1 class="hero__title animate-on-scroll">
+      Your doctor, <br /><span class="highlight">just a tap</span> away
+    </h1>
+    <p class="hero__subtitle animate-on-scroll">
+      WellConnect makes it effortless to find the right doctor, book an appointment, and take care of your health — all in one place.
+    </p>
+    <div class="hero__buttons animate-on-scroll">
+      <a href="#how" class="btn-primary" id="btnBookAppointment">Book an appointment</a>
+      <a href="#why" class="btn-secondary" id="btnFindDoctor">Find doctor</a>
+    </div>
+  </section>
+
+  <!-- ===== STATS BAR ===== -->
+  <section class="stats" id="stats">
+    <div class="stats__inner">
+      <div class="stat-item animate-on-scroll">
+        <div class="stat-item__number">500+</div>
+        <div class="stat-item__label">Verified doctors</div>
+      </div>
+      <div class="stat-item animate-on-scroll">
+        <div class="stat-item__number">25+</div>
+        <div class="stat-item__label">Specialities</div>
+      </div>
+      <div class="stat-item animate-on-scroll">
+        <div class="stat-item__number">2 <span>mins</span></div>
+        <div class="stat-item__label">Avg. Booking time</div>
+      </div>
+      <div class="stat-item animate-on-scroll">
+        <div class="stat-item__rating">
+          <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+          </svg>
+          <div class="stat-item__number">4.9</div>
+        </div>
+        <div class="stat-item__label">Rating</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY WELLCONNECT ===== -->
+  <section class="why-section" id="why">
+    <div class="section-label animate-on-scroll">Why WellConnect</div>
+    <h2 class="section-heading animate-on-scroll">Everything you need, nothing you don't</h2>
+
+    <div class="features-grid">
+      <!-- Card 1 -->
+      <div class="feature-card animate-on-scroll">
+        <div class="feature-card__icon">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="10" cy="7" r="4" />
+            <path d="M3 18c0-3.87 3.13-7 7-7s7 3.13 7 7" />
+          </svg>
+        </div>
+        <div class="feature-card__title">Find the right doctor</div>
+        <div class="feature-card__desc">Filter by specialty, location, language and availability in seconds</div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="feature-card animate-on-scroll">
+        <div class="feature-card__icon">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="14" height="14" rx="2" />
+            <path d="M3 8h14" />
+            <path d="M8 4V2" />
+            <path d="M12 4V2" />
+            <path d="M7 12l2 2 4-4" />
+          </svg>
+        </div>
+        <div class="feature-card__title">Book Instantly</div>
+        <div class="feature-card__desc">See real-time slots and confirm your appointment without any phone calls</div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="feature-card animate-on-scroll">
+        <div class="feature-card__icon">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h10a2 2 0 012 2v10a2 2 0 01-2 2H4V4z" />
+            <circle cx="14" cy="4" r="3" />
+          </svg>
+        </div>
+        <div class="feature-card__title">Your health records</div>
+        <div class="feature-card__desc">Access past visits, prescriptions, and notes in one secure place</div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="feature-card animate-on-scroll">
+        <div class="feature-card__icon">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 3h12a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2z" />
+            <path d="M8 17h4" />
+            <path d="M10 15v2" />
+          </svg>
+        </div>
+        <div class="feature-card__title">Smart reminders</div>
+        <div class="feature-card__desc">Get notified before you visit so you never miss an appointment again.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how-section" id="how">
+    <div class="how-section__inner">
+      <div>
+        <div class="section-label animate-on-scroll">How it works</div>
+        <h2 class="section-heading animate-on-scroll">Get Started in minutes</h2>
+      </div>
+
+      <div class="steps">
+        <div class="step-card animate-on-scroll">
+          <div class="step-card__number">1</div>
+          <div class="step-card__content">
+            <div class="step-card__title">Create your free account</div>
+            <div class="step-card__desc">Sign up with your email or phone number — it takes under a minute.</div>
+          </div>
+        </div>
+
+        <div class="step-card animate-on-scroll">
+          <div class="step-card__number">2</div>
+          <div class="step-card__content">
+            <div class="step-card__title">Search for a doctor</div>
+            <div class="step-card__desc">Browse verified doctors by specialty, location, or availability.</div>
+          </div>
+        </div>
+
+        <div class="step-card animate-on-scroll">
+          <div class="step-card__number">3</div>
+          <div class="step-card__content">
+            <div class="step-card__title">Book your appointment</div>
+            <div class="step-card__desc">Pick a time that works for you and confirm instantly — no waiting on hold.</div>
+          </div>
+        </div>
+
+        <div class="step-card animate-on-scroll">
+          <div class="step-card__number">4</div>
+          <div class="step-card__content">
+            <div class="step-card__title">Show up and feel better</div>
+            <div class="step-card__desc">Receive a reminder, walk in, and manage follow-ups from the app.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING SECTION ===== -->
+  <section class="pricing-section" id="pricing">
+    <div class="pricing-section__inner">
+      <!-- Toggle -->
+      <div class="pricing-toggle animate-on-scroll" id="pricingToggle">
+        <div class="pricing-toggle__slider" id="toggleSlider"></div>
+        <button class="pricing-toggle__btn active" id="toggleMonthly" data-plan="monthly">Monthly</button>
+        <button class="pricing-toggle__btn" id="toggleYearly" data-plan="yearly">Yearly</button>
+      </div>
+
+      <!-- Cards -->
+      <div class="pricing-cards">
+        <!-- Free Plan -->
+        <div class="pricing-card animate-on-scroll">
+          <div class="pricing-card__header">
+            <div class="pricing-card__price">Free</div>
+          </div>
+          <ul class="pricing-card__features">
+            <li class="included">
+              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>
+              <span>Book appointments</span>
+            </li>
+            <li class="included">
+              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>
+              <span>Chat with Doctor</span>
+            </li>
+            <li class="included">
+              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>
+              <span>Customer care</span>
+            </li>
+            <li class="included">
+              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>
+              <span>24/7 help available</span>
+            </li>
+            <li class="excluded">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="4"/></svg>
+              <span>Priority chat with Doctor</span>
+            </li>
+            <li class="excluded">
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="4"/></svg>
+              <span>Call back from Doctors</span>
+            </li>
+          </ul>
+          <button class="pricing-card__btn" id="btnFreePlan">Get Started</button>
+        </div>
+
+        <!-- Paid Plan -->
+        <div class="pricing-card animate-on-scroll">
+          <div class="pricing-card__header">
+            <div class="pricing-card__price" id="paidPrice">$12/mo</div>
+            <div class="pricing-card__billing" id="paidBilling">Billed Monthly</div>
+          </div>
+          <ul class="pricing-card__features">
+            <li class="included">
+              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>
+              <span>Priority chat with Doctor</span>
+            </li>
+            <li class="included">
+              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>
+              <span>Call back from Doctors</span>
+            </li>
+            <li class="included">
+              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>
+              <span>Priority while booking appointments</span>
+            </li>
+            <li class="included">
+              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>
+              <span>24/7 help available</span>
+            </li>
+            <li class="included">
+              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/></svg>
+              <span>Customer care</span>
+            </li>
+          </ul>
+          <button class="pricing-card__btn" id="btnPaidPlan">Get Started</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section" id="cta">
+    <div class="cta-section__content">
+      <h2 class="cta-section__heading animate-on-scroll">Ready to take care of your health?</h2>
+      <p class="cta-section__subtitle animate-on-scroll">Join thousands of patients who book their appointments smarter with WellConnect.</p>
+      <div class="cta-section__buttons animate-on-scroll">
+        <a href="#" class="btn-primary" id="btnCreateAccount">Create a free account</a>
+        <a href="#" class="btn-secondary" id="btnLoginBottom">Log in</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>&copy; 2026 WellConnect. All rights reserved.</p>
+  </footer>
+
+  <!-- Scroll animation styles -->
+  <style>
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+
+  <script src="script.js"></script>
+</body>
+</html>

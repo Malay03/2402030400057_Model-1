@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Effects with GET and POST</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: skyblue;
+            text-align: center;
+            line-height: 100px;
+            margin: 20px auto;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+
+        .buttons button {
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #eef;
+            border-left: 5px solid blue;
+            min-height: 50px;
+        }
+
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        input {
+            padding: 8px;
+            margin: 5px;
+            width: 200px;
+        }
+
+        .section-title {
+            margin-top: 30px;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>jQuery Effects and GET/POST Example</h1>
+
+        <h2 class="section-title">jQuery Effects</h2>
+
+        <div class="buttons">
+            <button id="hideBtn">Hide</button>
+            <button id="showBtn">Show</button>
+            <button id="toggleBtn">Toggle</button>
+            <button id="fadeOutBtn">Fade Out</button>
+            <button id="fadeInBtn">Fade In</button>
+            <button id="fadeToggleBtn">Fade Toggle</button>
+            <button id="slideUpBtn">Slide Up</button>
+            <button id="slideDownBtn">Slide Down</button>
+            <button id="slideToggleBtn">Slide Toggle</button>
+            <button id="animateBtn">Animate</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+
+        <div class="box" id="myBox">Hello</div>
+
+        <h2 class="section-title">jQuery GET Request</h2>
+        <div class="buttons">
+            <button id="getBtn">Load Data using GET</button>
+        </div>
+
+        <h2 class="section-title">jQuery POST Request</h2>
+        <form id="postForm">
+            <input type="text" id="title" placeholder="Enter title" required />
+            <input type="text" id="body" placeholder="Enter body" required />
+            <br>
+            <button type="submit">Send Data using POST</button>
+        </form> 
+
+        <div id="result">Result will appear here...</div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            // Hide and Show
+            $("#hideBtn").click(function () {
+                $("#myBox").hide();
+            });
+
+            $("#showBtn").click(function () {
+                $("#myBox").show();
+            });
+
+            // Toggle
+            $("#toggleBtn").click(function () {
+                $("#myBox").toggle();
+            });
+
+            // Fade
+            $("#fadeOutBtn").click(function () {
+                $("#myBox").fadeOut();
+            });
+
+            $("#fadeInBtn").click(function () {
+                $("#myBox").fadeIn();
+            });
+
+            $("#fadeToggleBtn").click(function () {
+                $("#myBox").fadeToggle();
+            });
+
+            // Slide
+            $("#slideUpBtn").click(function () {
+                $("#myBox").slideUp();
+            });
+
+            $("#slideDownBtn").click(function () {
+                $("#myBox").slideDown();
+            });
+
+            $("#slideToggleBtn").click(function () {
+                $("#myBox").slideToggle();
+            });
+
+            // Animate
+            $("#animateBtn").click(function () {
+                $("#myBox").animate({
+                    left: '200px',
+                    width: '250px',
+                    height: '120px',
+                    opacity: '0.5'
+                }, 1000);
+            });
+
+            // Reset
+            $("#resetBtn").click(function () {
+                $("#myBox").show().css({
+                    left: '0px',
+                    width: '200px',
+                    height: '100px',
+                    opacity: '1'
+                });
+            });
+
+            // GET request
+            $("#getBtn").click(function () {
+                $.get("https://jsonplaceholder.typicode.com/posts/1", function (data) {
+                    $("#result").html(
+                        "<h3>GET Response</h3>" +
+                        "<p><b>Title:</b> " + data.title + "</p>" +
+                        "<p><b>Body:</b> " + data.body + "</p>"
+                    );
+                });
+            });
+
+            // POST request
+            $("#postForm").submit(function (e) {
+                e.preventDefault();
+
+                let title = $("#title").val();
+                let body = $("#body").val();
+
+                $.post("https://jsonplaceholder.typicode.com/posts",
+                    {
+                        title: title,
+                        body: body,
+                        userId: 1
+                    },
+                    function (data) {
+                        $("#result").html(
+                            "<h3>POST Response</h3>" +
+                            "<p><b>ID:</b> " + data.id + "</p>" +
+                            "<p><b>Title:</b> " + data.title + "</p>" +
+                            "<p><b>Body:</b> " + data.body + "</p>"
+                        );
+                    }
+                );
+            });
+
+        });
+    </script>
+
+</body>
+</html>
